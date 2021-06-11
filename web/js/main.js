@@ -5,10 +5,10 @@ document.getElementById('audio').addEventListener(
   },
   false
 );
-document.getElementById('button-number').addEventListener(
+document.getElementById('image').addEventListener(
   'click',
   () => {
-    eel.get_random_number();
+    eel.image();
   },
   false
 );

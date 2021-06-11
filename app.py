@@ -2,6 +2,7 @@ import eel
 import random
 from datetime import datetime
 from audio import audio_processing
+from image import image_processing
 
 eel.init('web')
 
@@ -12,8 +13,8 @@ def audio():
 
 
 @eel.expose
-def get_random_number():
-    eel.prompt_alerts(random.randint(1, 100))
+def image():
+    image_processing()
 
 
 @eel.expose
