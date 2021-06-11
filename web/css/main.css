@@ -1,0 +1,52 @@
+.bg-image {
+  background-image: url('./body_background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  height: 100vh;
+}
+
+.container-fluid {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+}
+
+.card-deck {
+  height: 50vh;
+}
+
+.card {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card button {
+  margin: 0;
+  display: block;
+}
+
+.image-processing {
+  background-image: url('./image-processing.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.audio-processing {
+  background-image: url('./audio-processing.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.video-processing {
+  background-image: url('./video-processing.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
