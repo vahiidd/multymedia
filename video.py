@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 
-def video_processing():
+def video_processing(file_path):
 
-    cap = cv2.VideoCapture('videoplayback.mp4')
+    cap = cv2.VideoCapture(file_path)
 
     ret, frame1 = cap.read()
     ret, frame2 = cap.read()

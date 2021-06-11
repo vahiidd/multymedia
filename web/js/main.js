@@ -8,6 +8,7 @@ document.getElementById('audio').addEventListener(
 document.getElementById('image').addEventListener(
   'click',
   () => {
+    eel.pythonFunction();
     eel.image();
   },
   false
@@ -15,6 +16,7 @@ document.getElementById('image').addEventListener(
 document.getElementById('video').addEventListener(
   'click',
   () => {
+    eel.pythonFunction();
     eel.video();
   },
   false

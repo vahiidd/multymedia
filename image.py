@@ -1,8 +1,8 @@
 import cv2
 
-def image_processing():
+def image_processing(file_path):
 
-    img = cv2.imread('./lena.png')
+    img = cv2.imread(file_path)
     classNames = []
     classFile = 'coco.names'
     with open(classFile, 'rt') as f:
