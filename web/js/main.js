@@ -12,22 +12,14 @@ document.getElementById('image').addEventListener(
   },
   false
 );
-document.getElementById('button-date').addEventListener(
+document.getElementById('video').addEventListener(
   'click',
   () => {
-    eel.get_date();
+    eel.video();
   },
   false
 );
-document.getElementById('button-ip').addEventListener(
-  'click',
-  () => {
-    eel.get_ip();
-  },
-  false
-);
-
-eel.expose(prompt_alerts);
-function prompt_alerts(description) {
-  alert(description);
-}
+// eel.expose(prompt_alerts);
+// function prompt_alerts(description) {
+//   alert(description);
+// }
