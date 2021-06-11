@@ -1,7 +1,7 @@
-document.getElementById('button-name').addEventListener(
+document.getElementById('audio').addEventListener(
   'click',
   () => {
-    eel.get_random_name();
+    eel.audio();
   },
   false
 );

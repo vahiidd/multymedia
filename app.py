@@ -1,12 +1,15 @@
 import eel
 import random
 from datetime import datetime
+from audio import audio_processing
+
 eel.init('web')
 
 
 @eel.expose
-def get_random_name():
-    eel.prompt_alerts('Random name')
+def audio():
+    audio_processing()
+    # eel.prompt_alerts('Random name')
 
 
 @eel.expose
