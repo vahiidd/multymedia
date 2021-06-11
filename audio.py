@@ -7,61 +7,51 @@ import time
 from tkinter import TclError
 
 
-
-# constants
-CHUNK = 1024 * 2             # samples per frame
-FORMAT = pyaudio.paInt16     # audio format (bytes per sample?)
-CHANNELS = 1                 # single channel for microphone
-RATE = 44100                 # samples per second
-
-# create matplotlib figure and axes
-fig, ax = plt.subplots(1, figsize=(15, 7))
-
-# pyaudio class instance
-p = pyaudio.PyAudio()
-
-# stream object to get data from microphone
-stream = p.open(
-    format=FORMAT,
-    channels=CHANNELS,
-    rate=RATE,
-    input=True,
-    output=True,
-    frames_per_buffer=CHUNK
-)
-
-# variable for plotting
-x = np.arange(0, 2 * CHUNK, 2)
-
-# create a line object with random data
-line, = ax.plot(x, np.random.rand(CHUNK), '-', lw=2)
-
-# basic formatting for the axes
-ax.set_title('AUDIO WAVEFORM')
-ax.set_xlabel('samples')
-ax.set_ylabel('volume')
-ax.set_ylim(0, 255)
-ax.set_xlim(0, 2 * CHUNK)
-plt.setp(ax, xticks=[0, CHUNK, 2 * CHUNK], yticks=[0, 128, 255])
-
-# show the plot
-plt.show(block=False)
-
-print('stream started')
-
-# for measuring frame rate
-frame_count = 0
-start_time = time.time()
-
-
 def audio_processing():
-    global frame_count
-    global start_time
-    global stream
-    global CHUNK
-    global fig
-    global line
+    # constants
+    CHUNK = 1024 * 2             # samples per frame
+    FORMAT = pyaudio.paInt16     # audio format (bytes per sample?)
+    CHANNELS = 1                 # single channel for microphone
+    RATE = 44100                 # samples per second
 
+    # create matplotlib figure and axes
+    fig, ax = plt.subplots(1, figsize=(15, 7))
+
+    # pyaudio class instance
+    p = pyaudio.PyAudio()
+
+    # stream object to get data from microphone
+    stream = p.open(
+        format=FORMAT,
+        channels=CHANNELS,
+        rate=RATE,
+        input=True,
+        output=True,
+        frames_per_buffer=CHUNK
+    )
+
+    # variable for plotting
+    x = np.arange(0, 2 * CHUNK, 2)
+
+    # create a line object with random data
+    line, = ax.plot(x, np.random.rand(CHUNK), '-', lw=2)
+
+    # basic formatting for the axes
+    ax.set_title('AUDIO WAVEFORM')
+    ax.set_xlabel('samples')
+    ax.set_ylabel('volume')
+    ax.set_ylim(0, 255)
+    ax.set_xlim(0, 2 * CHUNK)
+    plt.setp(ax, xticks=[0, CHUNK, 2 * CHUNK], yticks=[0, 128, 255])
+
+    # show the plot
+    plt.show(block=False)
+
+    print('stream started')
+
+    # for measuring frame rate
+    frame_count = 0
+    start_time = time.time()
 
 
     while True:

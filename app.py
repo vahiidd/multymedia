@@ -9,7 +9,6 @@ eel.init('web')
 @eel.expose
 def audio():
     audio_processing()
-    # eel.prompt_alerts('Random name')
 
 
 @eel.expose
