@@ -26,7 +26,6 @@ def video_processing(file_path):
             cv2.putText(frame1, "Status: {}".format('Movement'),
                         (10, 20), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 3)
 
-        # cv2.drawContours(frame1, contours, -1, (0, 255, 0), 2)
 
         cv2.imshow("inter", frame1)
         frame1 = frame2
